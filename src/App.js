@@ -60,7 +60,7 @@ function App() {
           <Route exact path="/about" element={<About mode={mode}/>}>
           </Route>
           <Route exact path="/" element = {
-          <TextForm showAlert={showAlert} heading = "Try Textutils - Word counter , Character counter, R emove extra spaces" mode={mode}/>}>
+          <TextForm showAlert={showAlert} heading = "Try Textutils - Word counter , Character counter, Remove extra spaces" mode={mode}/>}>
           </Route>
         </Routes>
         </div>
