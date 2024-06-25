@@ -1,10 +1,10 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 
@@ -50,21 +50,21 @@ function App() {
   }
   return (
       <>
-      {/* <BrowserRouter> */}
-      <Navbar title = "textutils" mode={mode} toggleMode={toggleMode}/>
+      <BrowserRouter>
+      <Navbar title = "textutils" aboutText="about textutils" mode={mode} toggleMode={toggleMode}/>
       <Alert alert = {alert}/>
       <div className="container my-3" >
-        {/* <Routes> */}
+        <Routes>
 
           {/* we use exact path because react does partial matching for eg. /user --> componen5t 1 and /users/about --> component 2 */}
-          {/* <Route exact path="/about" element={<About/>}>
-          </Route> */}
-          {/* <Route exact path="/" element ={*/}
-          <TextForm showAlert={showAlert} heading = "Enter Text Below " mode={mode}/>
-          {/* </Route>
-        </Routes> */}
+          <Route exact path="/about" element={<About mode={mode}/>}>
+          </Route>
+          <Route exact path="/" element = {
+          <TextForm showAlert={showAlert} heading = "Try Textutils - Word counter , Character counter, R emove extra spaces" mode={mode}/>}>
+          </Route>
+        </Routes>
         </div>
-       {/* </BrowserRouter> */}
+       </BrowserRouter>
       
       </> 
   );
